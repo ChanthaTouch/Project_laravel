@@ -1,0 +1,34 @@
+Folder PATH listing for volume DATA
+Volume serial number is CC76-C1C1
+F:.
+├───public
+│   └───assets
+│       └───images
+│           ├───auth
+│           ├───error
+│           ├───faq
+│           ├───flags
+│           └───knowledge
+└───src
+    ├───assets
+    │   └───css
+    ├───components
+    │   ├───icon
+    │   │   └───menu
+    │   ├───layout
+    │   └───plugins
+    ├───composables
+    ├───layouts
+    ├───locales
+    ├───router
+    ├───stores
+    └───views
+        ├───apps
+        │   └───invoice
+        ├───auth
+        ├───components
+        ├───datatables
+        ├───elements
+        ├───forms
+        ├───pages
+        └───users

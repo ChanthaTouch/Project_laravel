@@ -1,30 +1,25 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+    <div
+        class="main-section antialiased relative font-nunito text-sm font-normal"
+        :class="[store.sidebar ? 'toggle-sidebar' : '', store.menu, store.layout, store.rtlClass]"
+    >
+        <component v-bind:is="mainLayout"></component>
+    </div>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+<script lang="ts" setup>
+    import { computed } from 'vue';
+
+    import appLayout from '@/layouts/app-layout.vue';
+    import authLayout from '@/layouts/auth-layout.vue';
+    import { useAppStore } from '@/stores/index';
+    import { useMeta } from '@/composables/use-meta';
+    const store = useAppStore();
+
+    // meta
+    useMeta({ title: 'Sales Admin' });
+
+    const mainLayout = computed(() => {
+        return store.mainLayout === 'auth' ? authLayout : appLayout;
+    });
+</script>

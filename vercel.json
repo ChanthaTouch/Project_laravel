@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/.git/(.*)", "destination": "/404" },
+    { "source": "/(.*)", "destination": "/" }
+  ]
+}
