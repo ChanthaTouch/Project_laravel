@@ -14,6 +14,7 @@
         "preview:uat": "vite preview --mode uat",
         "preview:prod": "vite preview --mode production"
     },
+    
     "dependencies": {
         "@bhplugin/vue3-datatable": "^2.0.0",
         "@fortawesome/fontawesome-svg-core": "^6.7.2",
